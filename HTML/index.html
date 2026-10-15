@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE AN VAULT | Premium Sports & Streetwear</title>
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Glowing Cursor -->
+    <div class="cursor-glow"></div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo">THE AN <span>VAULT</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Collection</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="sub-badge">NEW DROP 2026</span>
+            <h1>IMPOSSIBLE IS NOTHING</h1>
+            <p>Elevate your game with high-performance sports jerseys and exclusive streetwear engineered for champions.</p>
+            <div class="hero-btns">
+                <a href="#products" class="btn btn-primary">Shop Collection</a>
+                <a href="#about" class="btn btn-outline">Explore More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filter Buttons -->
+    <section id="products" class="products-section">
+        <h2>FEATURED RELEASES</h2>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterProducts('all')">All Items</button>
+            <button class="filter-btn" onclick="filterProducts('jersey')">Jerseys</button>
+            <button class="filter-btn" onclick="filterProducts('streetwear')">Streetwear</button>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-category="jersey">
+                <div class="badge">Best Seller</div>
+                <div class="product-img img-1">
+                    <span>PRO HOME JERSEY</span>
+                </div>
+                <div class="product-info">
+                    <h3>The AN Vault - Strike Edition</h3>
+                    <p class="price">$45.00</p>
+                    <button onclick="addToCart('The AN Vault - Strike Edition', 45)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-category="jersey">
+                <div class="badge">New</div>
+                <div class="product-img img-2">
+                    <span>APEX LEGEND</span>
+                </div>
+                <div class="product-info">
+                    <h3>Smart Collection - Apex Jersey</h3>
+                    <p class="price">$49.00</p>
+                    <button onclick="addToCart('Smart Collection - Apex Jersey', 49)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-category="streetwear">
+                <div class="badge limited">Limited</div>
+                <div class="product-img img-3">
+                    <span>STREETWEAR HOODIE</span>
+                </div>
+                <div class="product-info">
+                    <h3>Vault Heritage Hoodie</h3>
+                    <p class="price">$65.00</p>
+                    <button onclick="addToCart('Vault Heritage Hoodie', 65)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide-out Cart Drawer -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">Total: $<span id="cart-total">0.00</span></div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>THE AN VAULT</h3>
+            <p>Powered by Smart Collection & AJMIR</p>
+            <p>&copy; 2026 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="Node.js"></script>
+</body>
+</html>
